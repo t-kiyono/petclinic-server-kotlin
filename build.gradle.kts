@@ -47,6 +47,12 @@ allprojects {
   }
 }
 
+dependencyManagement {
+  dependencies {
+    dependency("org.mockito.kotlin:mockito-kotlin:5.2.1")
+  }
+}
+
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter")
   implementation("org.springframework.boot:spring-boot-starter-actuator")
@@ -55,4 +61,5 @@ dependencies {
   implementation(project(":domain"))
   implementation(project(":stub"))
   testImplementation("org.springframework.boot:spring-boot-starter-test")
+  testImplementation("org.mockito.kotlin:mockito-kotlin")
 }
